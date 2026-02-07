@@ -43,11 +43,13 @@
     
     <div class="list_write">
         <h1 style="text-align: center;"
-        >게시글 작성</h1>
+        >게시글</h1>
         <br>
 
         <h2>제목</h2>
-        <input type="text" class="form-control" id="title" name="title">
+        <input type="text" class="form-control" id="title" name="title"
+               value="마키마가 레제를 죽였다!!!"
+               disabled>
 
         <br>
 
@@ -57,12 +59,14 @@
         <br>
 
         <h2>작성자</h2>
-        <input type="text" class="form-control" id="writer" name="writer">
+        <input type="text" class="form-control" id="writer" name="writer"
+                value="슬픈사람"
+                disabled>
 
         <br>
 
         <h2>작성일</h2>
-        <p>2026-01-31</p>
+        <p>2025-11-31</p>
 
     </div>
 
@@ -78,4 +82,8 @@
   var quill = new Quill('#editor', {
     theme: 'snow'
   });
+
+  const content = "마키마가 레제를 죽였다니 ㅠ.ㅠ 가지마 레제 ㅠ~~~";
+  quill.setText(content);
+  quill.enable(false);
 </script>
